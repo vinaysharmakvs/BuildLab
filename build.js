@@ -1,0 +1,1 @@
+const fs=require('node:fs'),path=require('node:path');const out=path.join(__dirname,'dist');fs.mkdirSync(out,{recursive:true});for(const file of ['index.html','style.css','app.js'])fs.copyFileSync(path.join(__dirname,file),path.join(out,file));console.log('Built static site in dist/');
